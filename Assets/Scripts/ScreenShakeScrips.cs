@@ -15,9 +15,8 @@ public class ScreenShake: MonoBehaviour
             start = false;
             StartCoroutine(Shaking());
         }
-
     }
-    
+
     IEnumerator Shaking()
     {
         Vector3 startPosition = transform.position;
