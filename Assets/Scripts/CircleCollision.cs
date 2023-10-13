@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CircleCollision : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class CircleCollision : MonoBehaviour
         if (collision.gameObject.CompareTag("Illusion"))
         {
             //Endgame
+            SceneManager.LoadScene("MainMenu");
         }
     }
 }
