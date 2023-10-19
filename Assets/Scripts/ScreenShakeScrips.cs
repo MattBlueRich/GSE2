@@ -11,13 +11,13 @@ public class ScreenShake: MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Fortune"))
+        if (collision.gameObject.CompareTag("Fortune") || collision.gameObject.CompareTag("Illusion"))
         {
             StartCoroutine(Shaking());
         }
     }
 
-    IEnumerator Shaking()
+    public IEnumerator Shaking()
     {
         Vector3 startPosition = Camera.transform.position;
         float elapsedTime = 0f;

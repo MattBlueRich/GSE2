@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool keyPressed;
 
+    [HideInInspector] public bool canMove = true;
+
     void Start()
     {
         radius = defaultRadius;
@@ -22,28 +24,31 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        angle += (moveSpeed / (radius * Mathf.PI * 2f)) * Time.deltaTime;
-        transform.position = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0) * radius;
+        if (canMove)
+        {
+            angle += (moveSpeed / (radius * Mathf.PI * 2f)) * Time.deltaTime;
+            transform.position = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0) * radius;
 
-        if (Input.GetKey(KeyCode.Space))
-        {
-            radius = Mathf.Lerp(radius, maxRadius, 1 * Time.deltaTime * lerpSpeed);
-            keyPressed = true;
-        }
-      
-        if(Input.GetKeyUp(KeyCode.Space))
-        {
-            keyPressed = false;
-        }
-
-        if(keyPressed == false)
-        {
-            if(radius != defaultRadius)
+            if (Input.GetKey(KeyCode.Space))
             {
-                radius = Mathf.Lerp(radius, defaultRadius, 1 * Time.deltaTime * lerpSpeed);
-
+                radius = Mathf.Lerp(radius, maxRadius, 1 * Time.deltaTime * lerpSpeed);
+                keyPressed = true;
             }
 
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                keyPressed = false;
+            }
+
+            if (keyPressed == false)
+            {
+                if (radius != defaultRadius)
+                {
+                    radius = Mathf.Lerp(radius, defaultRadius, 1 * Time.deltaTime * lerpSpeed);
+
+                }
+
+            }
         }
 
     }
