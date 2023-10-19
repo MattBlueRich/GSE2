@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -31,7 +32,6 @@ public class ScoreManager : MonoBehaviour
         highScore = PlayerPrefs.GetFloat("highScore", 0); // Fetches the PlayerPref "highScore", if it doesn't exist, create it and set with value of 0.
         StartCoroutine(ScorePerSecond());
     }
-
     IEnumerator ScorePerSecond()
     {
         while (true)
