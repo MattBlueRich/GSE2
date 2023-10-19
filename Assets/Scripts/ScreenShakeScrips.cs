@@ -7,29 +7,29 @@ public class ScreenShake: MonoBehaviour
     public bool start = false;
     public AnimationCurve curve;
     public float duration = 1f;
+    public GameObject Camera;
 
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (start)
+        if (collision.gameObject.CompareTag("Fortune"))
         {
-            start = false;
             StartCoroutine(Shaking());
         }
     }
 
     IEnumerator Shaking()
     {
-        Vector3 startPosition = transform.position;
+        Vector3 startPosition = Camera.transform.position;
         float elapsedTime = 0f;
 
         while (elapsedTime < duration) 
         {
             elapsedTime += Time.deltaTime;
             float strength = curve.Evaluate(elapsedTime / duration);
-            transform.position = startPosition + Random.insideUnitSphere * strength;
+            Camera.transform.position = startPosition + Random.insideUnitSphere * strength;
             yield return null;
         }
 
-        transform.position = startPosition;
+        Camera.transform.position = startPosition;
     }
 }
