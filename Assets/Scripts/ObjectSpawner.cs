@@ -18,9 +18,9 @@ public class ObjectSpawner : MonoBehaviour
     public List<GameObject> fortunesInGame; //List of the fortunes currently in the game scene (dont edit in inspector)
 
     [SerializeField]
-    private float maxSize = 0.75f; // This is the maximum size an illusion can spawn as.
+    private float maxSize = 1.25f; // This is the maximum size an illusion can spawn as.
     [SerializeField]
-    private float minSize = 1.25f; // This is the minimum size an illusion can spawn as.
+    private float minSize = 0.75f; // This is the minimum size an illusion can spawn as.
 
 
 

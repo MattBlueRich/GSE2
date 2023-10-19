@@ -877,6 +877,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5369302555485421340, guid: d834ab4fb21fb5846ad45e5015d3dfed, type: 3}
+      propertyPath: maxSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5369302555485421340, guid: d834ab4fb21fb5846ad45e5015d3dfed, type: 3}
+      propertyPath: minSize
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6149963999997167275, guid: d834ab4fb21fb5846ad45e5015d3dfed, type: 3}
       propertyPath: m_Name
       value: SpawnManager
