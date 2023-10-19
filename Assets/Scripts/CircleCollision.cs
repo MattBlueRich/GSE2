@@ -18,6 +18,7 @@ public class CircleCollision : MonoBehaviour
         if (collision.gameObject.CompareTag("Illusion"))
         {
             //Endgame
+            scoreManager.gameOver = true;
             SceneManager.LoadScene("GameOver");
         }
     }
