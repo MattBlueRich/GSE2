@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Illusion
+  - Fortune
+  - ProgressionManager
   layers:
   - Default
   - TransparentFX
@@ -40,4 +43,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Planet
+    uniqueID: 2383108383
+    locked: 0
+  - name: Illusions
+    uniqueID: 268561085
+    locked: 0
+  - name: Fortunes
+    uniqueID: 1240104275
+    locked: 0
+  - name: Player
+    uniqueID: 3592917069
     locked: 0

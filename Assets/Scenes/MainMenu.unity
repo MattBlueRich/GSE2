@@ -645,6 +645,7 @@ GameObject:
   - component: {fileID: 1011156989}
   - component: {fileID: 1011156991}
   - component: {fileID: 1011156990}
+  - component: {fileID: 1011156992}
   m_Layer: 5
   m_Name: Logo
   m_TagString: Untagged
@@ -684,7 +685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.43137255}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -709,6 +710,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1011156988}
   m_CullTransparentMesh: 1
+--- !u!114 &1011156992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011156988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74bfee2364b157a478820f5d4f718ee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnSpeed: 80
 --- !u!1 &1149119073
 GameObject:
   m_ObjectHideFlags: 0
