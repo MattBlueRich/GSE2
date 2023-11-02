@@ -22,11 +22,14 @@ public class ObjectSpawner : MonoBehaviour
     [SerializeField]
     private float minSize = 0.75f; // This is the minimum size an illusion can spawn as.
 
-
+    AudioSource audioSource; // This is used to play ambient twinkling sounds when the fortune appears on screen.
+    [Header("Audio")]
+    public AudioClip twinkleSFX; // Twinkle SFX.
 
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         StartCoroutine(Spawner()); // Starts the coroutine to spawn entitys
     }
 
@@ -86,6 +89,7 @@ public class ObjectSpawner : MonoBehaviour
         SpawnIllusion();
         yield return new WaitForSeconds(timeBetweenSpawns);
         SpawnFortune();
+        audioSource.PlayOneShot(twinkleSFX); // Plays sfx when fortune spawned.
         yield return new WaitForSeconds(timeBetweenSpawns);
         StartCoroutine(Spawner());
 
