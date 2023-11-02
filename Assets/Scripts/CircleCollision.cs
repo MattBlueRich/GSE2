@@ -95,6 +95,7 @@ public class CircleCollision : MonoBehaviour
     {
         yield return new WaitForSeconds(timeTillLoadScene);
         wipeController.AnimateOut(); // Transition out animation.
+
         yield return new WaitForSeconds(2.3f);
         SceneManager.LoadScene("GameOver");
     }

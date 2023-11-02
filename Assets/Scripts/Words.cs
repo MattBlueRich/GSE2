@@ -45,10 +45,17 @@ public class Words : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.A)) //Changes the words when the player presses the A Key (Will be removed)
         {
-            fortuneText.SetText(GetRandomAdjective() + " " + GetRandomVerb() + " " + GetRandomNouns()); //printing the chosen words onto the canvas including spaces
+
         }
     }
     
+    public void GetFortuneText()
+    {
+        fortuneText.SetText("A " + GetRandomAdjective() + " " + GetRandomNouns() + " \n" + GetRandomVerb() + "\n A " + GetRandomAdjective() + " " + GetRandomNouns()); //printing the chosen words onto the canvas including spaces
+
+    }
+
+
     private string GetRandomAdjective() //Gets a random adjective from the list
     {
         var randomIndex = UnityEngine.Random.Range(0, Adjectives.Count);

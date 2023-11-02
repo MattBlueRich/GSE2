@@ -67,6 +67,8 @@ public class ScoreManager : MonoBehaviour
     // This compares the totalScore with the current high score.
     public void SaveScore()
     {
+        PlayerPrefs.SetFloat("curScore", currentScore);
+        
         if(totalScore > highScore) // Is the total score more than the highscore?
         {
             PlayerPrefs.SetFloat("highScore", totalScore); // Set highscore PlayerPref to totalScore.
