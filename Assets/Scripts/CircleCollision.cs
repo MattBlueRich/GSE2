@@ -14,6 +14,12 @@ public class CircleCollision : MonoBehaviour
     public float hitstopDuration;
     public float timeTillLoadScene = 2.3f;
 
+    [Header("Audio")]
+    public List<AudioClip> fortunePickupSFX = new List<AudioClip>();
+    public List<AudioClip> illusionCollisionSFX = new List<AudioClip>();
+    public List<AudioClip> deathExplosionSFX = new List<AudioClip>();
+    AudioSource audioSource;
+
     Rigidbody2D rb;
     private PlayerMovement playerMovement;
     private ScreenShake screenShake;
@@ -29,7 +35,7 @@ public class CircleCollision : MonoBehaviour
         circleCollider2D = GetComponent<CircleCollider2D>();
 
         explosionRef = Resources.Load("DeathExplosion");
-
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -37,6 +43,7 @@ public class CircleCollision : MonoBehaviour
         if (collision.gameObject.CompareTag("Fortune"))
         {
             scoreManager.FortuneScore();
+            playSound("pickup"); // Plays pickup sound effect.
             Destroy(collision.gameObject);
         }
 
@@ -47,6 +54,7 @@ public class CircleCollision : MonoBehaviour
             playerMovement.canMove = false;
             circleCollider2D.enabled = false; // This stops any further collisions with other Illusions.
 
+            playSound("gong"); // Plays gong sound effect.
             HitStop(); // This pauses the game for a few frames, for impact.
 
             // Explosion particle effect.
@@ -78,6 +86,7 @@ public class CircleCollision : MonoBehaviour
         waiting = true;
         yield return new WaitForSecondsRealtime(duration); // We use "Realtime" in order to run this function while the game is paused.
         Time.timeScale = 1.0f; // Unpauses the game.
+        playSound("death"); // Plays death explosion sound effect.
         waiting = false; // Function can now be called again.
     }
 
@@ -88,5 +97,22 @@ public class CircleCollision : MonoBehaviour
         wipeController.AnimateOut(); // Transition out animation.
         yield return new WaitForSeconds(2.3f);
         SceneManager.LoadScene("GameOver");
+    }
+
+    // (Sound state cases: "pickup", "gong", "death")
+    void playSound(string state) 
+    {
+        switch (state)
+        {
+            case "pickup":
+                audioSource.PlayOneShot(fortunePickupSFX[Random.Range(0, fortunePickupSFX.Count)]);
+                break;
+            case "gong":
+                audioSource.PlayOneShot(illusionCollisionSFX[Random.Range(0, fortunePickupSFX.Count)]);
+                break;
+            case "death":
+                audioSource.PlayOneShot(deathExplosionSFX[Random.Range(0, fortunePickupSFX.Count)]);
+                break;
+        }
     }
 }
