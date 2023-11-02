@@ -13,6 +13,7 @@ public class EndCeremony : MonoBehaviour
     public TMP_Text scoreText;
     public TMP_Text highScoreText;
     public Animator anim;
+    public AudioSource audiosource;
 
 
     void Start()
@@ -23,6 +24,7 @@ public class EndCeremony : MonoBehaviour
 
         wordsScript.GetFortuneText();
         scoreText.SetText("Score: " + PlayerPrefs.GetFloat("curScore").ToString());
+        audiosource.Play();
 
         if (PlayerPrefs.GetFloat("highScore") == PlayerPrefs.GetFloat("curScore"))
         {
