@@ -36,6 +36,11 @@ public class EndCeremony : MonoBehaviour
             highScoreText.SetText("Highscore: " + PlayerPrefs.GetFloat("highScore").ToString());
         }
 
+        if (GameObject.FindGameObjectWithTag("MusicPlayer") != null)
+        {
+            Destroy(GameObject.FindGameObjectWithTag("MusicPlayer"));
+        }
+
     }
 
     void Update()

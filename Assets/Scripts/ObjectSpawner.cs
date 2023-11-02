@@ -30,7 +30,9 @@ public class ObjectSpawner : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        StartCoroutine(Spawner()); // Starts the coroutine to spawn entitys
+        //StartCoroutine(Spawner()); // Starts the coroutine to spawn entitys
+
+        StartCoroutine(BeginSpawner());
     }
 
     void Update()
@@ -93,5 +95,11 @@ public class ObjectSpawner : MonoBehaviour
         yield return new WaitForSeconds(timeBetweenSpawns);
         StartCoroutine(Spawner());
 
+    }
+
+    IEnumerator BeginSpawner()
+    {
+        yield return new WaitForSeconds(2.3f);
+        StartCoroutine(Spawner());
     }
 }
