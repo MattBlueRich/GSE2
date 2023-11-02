@@ -11,7 +11,7 @@ public class ScreenShake: MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Fortune") || collision.gameObject.CompareTag("Illusion"))
+        if (collision.gameObject.CompareTag("Illusion"))
         {
             StartCoroutine(Shaking());
         }
