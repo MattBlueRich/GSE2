@@ -784,6 +784,30 @@ PrefabInstance:
       propertyPath: m_Colors.m_NormalColor.a
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2990505281753775840, guid: 794d7aa90fccb214ba2c534041983424, type: 3}
+      propertyPath: m_Colors.m_PressedColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990505281753775840, guid: 794d7aa90fccb214ba2c534041983424, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990505281753775840, guid: 794d7aa90fccb214ba2c534041983424, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990505281753775840, guid: 794d7aa90fccb214ba2c534041983424, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990505281753775840, guid: 794d7aa90fccb214ba2c534041983424, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990505281753775840, guid: 794d7aa90fccb214ba2c534041983424, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3371657908065573628, guid: 794d7aa90fccb214ba2c534041983424, type: 3}
       propertyPath: m_fontSize
       value: 5
