@@ -51,7 +51,7 @@ public class Words : MonoBehaviour
     
     public void GetFortuneText()
     {
-        fortuneText.SetText("A " + GetRandomAdjective() + " " + GetRandomNouns() + " \n" + GetRandomVerb() + "\n A " + GetRandomAdjective() + " " + GetRandomNouns()); //printing the chosen words onto the canvas including spaces
+        fortuneText.SetText("A " + GetRandomAdjective() + " " + GetRandomNouns() + " \n" + GetRandomVerb() + "\n a " + GetRandomAdjective() + " " + GetRandomNouns() + "."); //printing the chosen words onto the canvas including spaces
 
     }
 
