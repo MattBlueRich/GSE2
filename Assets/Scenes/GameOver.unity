@@ -832,6 +832,10 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 4787742662960290179, guid: 794d7aa90fccb214ba2c534041983424, type: 3}
+      propertyPath: m_SortingOrder
+      value: -5
+      objectReference: {fileID: 0}
     - target: {fileID: 5272438585807927684, guid: 794d7aa90fccb214ba2c534041983424, type: 3}
       propertyPath: m_SortingOrder
       value: 1
