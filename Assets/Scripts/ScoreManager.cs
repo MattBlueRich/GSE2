@@ -18,6 +18,8 @@ public class ScoreManager : MonoBehaviour
 
     [Header("Score UI")]
     public TextMeshProUGUI scoreText; // This is the UI TMPRO text which shows the score at the top of the screen.
+    public TextMeshProUGUI highScoreText; // This is the UI TMPRO text which shows the highscore at the top of the screen.
+
 
     [HideInInspector] public bool gameOver; // This bool runs events when the game is over, and while the game is playing.
 
@@ -30,6 +32,8 @@ public class ScoreManager : MonoBehaviour
     private void Start()
     {
         highScore = PlayerPrefs.GetFloat("highScore", 0); // Fetches the PlayerPref "highScore", if it doesn't exist, create it and set with value of 0.
+        highScoreText.text = "HighScore: " + highScore.ToString("F0");
+
         StartCoroutine(ScorePerSecond());
     }
     IEnumerator ScorePerSecond()
