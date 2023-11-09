@@ -135,13 +135,13 @@ public class CircleCollision : MonoBehaviour
         switch (state)
         {
             case "pickup":
-                audioSource.PlayOneShot(fortunePickupSFX[Random.Range(0, fortunePickupSFX.Count)]);
+                audioSource.PlayOneShot(fortunePickupSFX[Random.Range(0, fortunePickupSFX.Count)], 1f);
                 break;
             case "gong":
-                audioSource.PlayOneShot(illusionCollisionSFX[Random.Range(0, fortunePickupSFX.Count)]);
+                audioSource.PlayOneShot(illusionCollisionSFX[Random.Range(0, fortunePickupSFX.Count)], .5f);
                 break;
             case "death":
-                audioSource.PlayOneShot(deathExplosionSFX[Random.Range(0, fortunePickupSFX.Count)]);
+                audioSource.PlayOneShot(deathExplosionSFX[Random.Range(0, fortunePickupSFX.Count)], .5f);
                 break;
         }
     }
