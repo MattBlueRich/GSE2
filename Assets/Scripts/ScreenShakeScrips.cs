@@ -1,18 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class ScreenShake: MonoBehaviour
 {
     public bool start = false;
     public AnimationCurve curve;
     public float duration = 1f;
-    public GameObject Camera;
+    private GameObject Camera;
+    public CinemachineVirtualCamera mainCam;
+    public CinemachineVirtualCamera zoomCam;
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Illusion"))
         {
+            if(mainCam.Priority >= 1)
+            {
+                Camera = mainCam.gameObject;
+            }
+
+            else if(zoomCam. Priority >= 1)
+            {
+                Camera = zoomCam.gameObject;
+            }
+
             StartCoroutine(Shaking());
         }
     }

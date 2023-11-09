@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Cinemachine;
 
 public class CircleCollision : MonoBehaviour
 {
@@ -26,6 +27,11 @@ public class CircleCollision : MonoBehaviour
     private Object explosionRef;
     CircleCollider2D circleCollider2D;
     bool waiting = false;
+
+    [SerializeField]
+    CinemachineVirtualCamera mainCam, zoomCam;
+
+    public ScreenShake screenShakeScript;
 
     private void Start()
     {
@@ -56,6 +62,9 @@ public class CircleCollision : MonoBehaviour
 
             playSound("gong"); // Plays gong sound effect.
             HitStop(); // This pauses the game for a few frames, for impact.
+
+            //Zoom the camera
+            StartCoroutine(ZoomCam(zoomCam, mainCam));
 
             // Explosion particle effect.
             GameObject explosion = (GameObject)Instantiate(explosionRef);
@@ -98,6 +107,20 @@ public class CircleCollision : MonoBehaviour
 
         yield return new WaitForSeconds(2.3f);
         SceneManager.LoadScene("GameOver");
+    }
+
+    IEnumerator ZoomCam(CinemachineVirtualCamera newC, CinemachineVirtualCamera oldC)
+    {
+        //Sets the view to the zoomed in camera
+        newC.Priority = 1;
+        oldC.Priority = 0;
+
+        //Waits then removes follow so the camera doesn't follow the player off screen
+        yield return new WaitForSeconds(0.1f);
+        newC.LookAt = null;
+        newC.Follow = null;
+        screenShakeScript.Shaking();
+
     }
 
     // (Sound state cases: "pickup", "gong", "death")
