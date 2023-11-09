@@ -790,6 +790,8 @@ GameObject:
   m_Component:
   - component: {fileID: 747339017}
   - component: {fileID: 747339016}
+  - component: {fileID: 747339018}
+  - component: {fileID: 747339019}
   m_Layer: 0
   m_Name: StarLights
   m_TagString: Untagged
@@ -814,7 +816,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 6.2
+  m_Intensity: 3.14
   m_LightVolumeIntensity: 0.01
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 000000001f590b8ebdea0110537dea494d9027d6
@@ -862,6 +864,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 545636666}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &747339018
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747339015}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5a5fb84ea1624eb488f096cbcaf68c0c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &747339019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747339015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9659c6376e4a3194581dfffdab43fd29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &834928422 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8891869221043027610, guid: 507ccfa82d164ae4aad8b0dba13a33e4, type: 3}
@@ -1233,7 +1268,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.2, y: 0.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
