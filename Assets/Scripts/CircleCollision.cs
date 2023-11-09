@@ -33,6 +33,9 @@ public class CircleCollision : MonoBehaviour
 
     public ScreenShake screenShakeScript;
 
+    public GameObject vignette;
+    public GameObject scoreText;
+
     private void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
@@ -51,6 +54,9 @@ public class CircleCollision : MonoBehaviour
             scoreManager.FortuneScore();
             playSound("pickup"); // Plays pickup sound effect.
             Destroy(collision.gameObject);
+
+            vignette.GetComponent<Animator>().SetTrigger("In");
+            scoreText.GetComponent<Animator>().SetTrigger("Green");
         }
 
         if (collision.gameObject.CompareTag("Illusion"))
