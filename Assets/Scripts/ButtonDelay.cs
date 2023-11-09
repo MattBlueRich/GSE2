@@ -11,7 +11,7 @@ public class ButtonDelay : MonoBehaviour
     {
         Mask.SetActive(false);
 
-        StartCoroutine(WaitToDisplay(10.0f));
+        StartCoroutine(WaitToDisplay(6.0f));
         
     }
 
