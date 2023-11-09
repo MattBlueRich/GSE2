@@ -45,6 +45,24 @@ public class EndCeremony : MonoBehaviour
 
     void Update()
     {
+        if (Input.anyKey)
+        {
 
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("EndCeremony"))
+            {
+
+                anim.speed = 1000;
+
+            }
+
+
+        }
+
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("EndCeremonyFortune"))
+        {
+
+            anim.speed = 1;
+
+        }
     }
 }
