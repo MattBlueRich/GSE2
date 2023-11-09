@@ -27,17 +27,17 @@ public class Words : MonoBehaviour
         textFile = Resources.Load<TextAsset>("TextFiles/Adjectives"); // Loads the text file
 
         foreach (var myString in textFile.text.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries))
-            Adjectives.Add(myString.Trim());
+            Adjectives.Add(myString.Trim().ToLower());
 
         textFile = Resources.Load<TextAsset>("TextFiles/Nouns");
 
         foreach (var myString in textFile.text.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries))
-            Nouns.Add(myString.Trim());
+            Nouns.Add(myString.Trim().ToLower());
 
         textFile = Resources.Load<TextAsset>("TextFiles/Verbs");
 
         foreach (var myString in textFile.text.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries))
-            TransistiveVerbs.Add(myString.Trim());
+            TransistiveVerbs.Add(myString.Trim().ToLower());
 
     }
 
