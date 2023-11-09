@@ -515,5 +515,6 @@ MonoBehaviour:
   timeBetweenSpawns: 3
   illusionsInGame: []
   fortunesInGame: []
-  maxSize: 0.5
-  minSize: 1.5
+  maxSize: 1
+  minSize: 0.5
+  twinkleSFX: {fileID: 8300000, guid: cd9e1292bd4836445abdcbe507ff2f32, type: 3}
