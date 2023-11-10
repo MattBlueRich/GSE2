@@ -503,7 +503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   illusions:
   - {fileID: 8223792387000154845, guid: 9273c42bd45bd2a41863d759ca23cb16, type: 3}
-  - {fileID: 8223792387000154845, guid: c7627d3e0af485245a187d8985f55100, type: 3}
+  - {fileID: 8223792387000154845, guid: 6434801a0f77f094a8365d3811612dfb, type: 3}
   fortunes:
   - {fileID: 8223792387000154845, guid: c874ea15298e7e444be45ce8bb341977, type: 3}
   spawnPoints:
