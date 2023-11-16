@@ -18,9 +18,16 @@ public class PlayerMovement : MonoBehaviour
 
     [HideInInspector] public bool canMove = true;
 
+    bool mobile;
+
     void Start()
     {
         radius = defaultRadius;
+
+        if(Application.platform == RuntimePlatform.Android)
+        {
+            mobile = true;
+        }
     }
 
     void Update()
@@ -30,32 +37,41 @@ public class PlayerMovement : MonoBehaviour
             angle += (moveSpeed / (radius * Mathf.PI * 2f)) * Time.deltaTime;
             transform.position = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0) * radius;
 
-            if (Input.GetKey(KeyCode.Space))
+            if(mobile)
             {
-                radius = Mathf.Lerp(radius, maxRadius, 1 * Time.deltaTime * lerpSpeed);
-                keyPressed = true;
+                foreach (Touch touch in Input.touches)
+                {
+                    if (touch.phase == TouchPhase.Stationary)
+                    {
+                        radius = Mathf.Lerp(radius, maxRadius, 1 * Time.deltaTime * lerpSpeed);
+                        keyPressed = true;
+
+                    }
+                    if (touch.phase == TouchPhase.Ended)
+                    {
+                        keyPressed = false;
+
+                    }
+
+                }
             }
 
-            if (Input.GetKeyUp(KeyCode.Space))
+           else if (!mobile)
             {
-                keyPressed = false;
-            }
 
-            foreach (Touch touch in Input.touches)
-            {
-                if (touch.phase == TouchPhase.Stationary)
+                if (Input.GetKey(KeyCode.Space))
                 {
                     radius = Mathf.Lerp(radius, maxRadius, 1 * Time.deltaTime * lerpSpeed);
                     keyPressed = true;
-
                 }
-                if (touch.phase == TouchPhase.Ended)
+
+                if (Input.GetKeyUp(KeyCode.Space))
                 {
                     keyPressed = false;
-
                 }
-
             }
+
+         
 
 
             if (keyPressed == false)
