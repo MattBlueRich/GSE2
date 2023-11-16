@@ -915,6 +915,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0.49899998, y: -1.88}
   m_SizeDelta: {x: 1.7696, y: 0.5806}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &624367712 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 478399896833142981, guid: 794d7aa90fccb214ba2c534041983424, type: 3}
+  m_PrefabInstance: {fileID: 3204709613552168035}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &624522523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1959,7 +1964,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 514f26faa8bbae947acc8c6cfd283f6b, type: 3}
     - target: {fileID: 6554401756381173251, guid: 794d7aa90fccb214ba2c534041983424, type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6762901668569583637, guid: 794d7aa90fccb214ba2c534041983424, type: 3}
       propertyPath: m_Enabled
@@ -2003,7 +2008,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7402629732120797318, guid: 794d7aa90fccb214ba2c534041983424, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4294967295
+      value: 352321535
       objectReference: {fileID: 0}
     - target: {fileID: 7665905387108209311, guid: 794d7aa90fccb214ba2c534041983424, type: 3}
       propertyPath: anim
@@ -2055,6 +2060,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 484789467}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 478399896833142981, guid: 794d7aa90fccb214ba2c534041983424, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3204709613552168041}
     - targetCorrespondingSourceObject: {fileID: 535664773272646304, guid: 794d7aa90fccb214ba2c534041983424, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
@@ -2104,6 +2112,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3204709613552168041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624367712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d687413a6be573d4dab38629bfa785da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 3204709613552168039}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
