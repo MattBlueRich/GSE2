@@ -40,7 +40,7 @@ public class EndCeremony : MonoBehaviour
         {
             GameObject musicPlayer = GameObject.FindGameObjectWithTag("MusicPlayer");
 
-            musicPlayer.GetComponent<AudioSource>().Pause();
+            musicPlayer.GetComponent<AudioSource>().Stop();
         }
     }
 
