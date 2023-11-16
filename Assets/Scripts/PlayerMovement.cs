@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Android;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -39,6 +40,23 @@ public class PlayerMovement : MonoBehaviour
             {
                 keyPressed = false;
             }
+
+            foreach (Touch touch in Input.touches)
+            {
+                if (touch.phase == TouchPhase.Began)
+                {
+                    radius = Mathf.Lerp(radius, maxRadius, 1 * Time.deltaTime * lerpSpeed);
+                    keyPressed = true;
+
+                }
+                if (touch.phase == TouchPhase.Ended)
+                {
+                    keyPressed = false;
+
+                }
+
+            }
+
 
             if (keyPressed == false)
             {
