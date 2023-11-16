@@ -38,9 +38,10 @@ public class EndCeremony : MonoBehaviour
 
         if (GameObject.FindGameObjectWithTag("MusicPlayer") != null)
         {
-            Destroy(GameObject.FindGameObjectWithTag("MusicPlayer"));
-        }
+            GameObject musicPlayer = GameObject.FindGameObjectWithTag("MusicPlayer");
 
+            musicPlayer.GetComponent<AudioSource>().Pause();
+        }
     }
 
     void Update()
