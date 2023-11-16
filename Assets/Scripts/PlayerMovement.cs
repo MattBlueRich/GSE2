@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
 
             foreach (Touch touch in Input.touches)
             {
-                if (touch.phase == TouchPhase.Began)
+                if (touch.phase == TouchPhase.Stationary)
                 {
                     radius = Mathf.Lerp(radius, maxRadius, 1 * Time.deltaTime * lerpSpeed);
                     keyPressed = true;
