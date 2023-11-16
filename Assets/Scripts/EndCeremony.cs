@@ -28,7 +28,7 @@ public class EndCeremony : MonoBehaviour
 
         if (PlayerPrefs.GetFloat("highScore") == PlayerPrefs.GetFloat("curScore"))
         {
-            highScoreText.SetText("New Highscore! " + PlayerPrefs.GetFloat("highScore").ToString());
+            highScoreText.SetText("New Highscore! \n Highscore: " + PlayerPrefs.GetFloat("highScore").ToString());
 
         }
         else
