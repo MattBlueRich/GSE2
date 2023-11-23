@@ -2009,6 +2009,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 248513491653365819, guid: 794d7aa90fccb214ba2c534041983424, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4de3d4bfb72d69c4b80ae992c63c9da3, type: 2}
     - target: {fileID: 478399896833142981, guid: 794d7aa90fccb214ba2c534041983424, type: 3}
       propertyPath: m_Name
       value: EndCeremonyManager
@@ -2119,7 +2123,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3371657908065573628, guid: 794d7aa90fccb214ba2c534041983424, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 16777215
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 3604127944521840136, guid: 794d7aa90fccb214ba2c534041983424, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2179,7 +2183,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7247320565450171652, guid: 794d7aa90fccb214ba2c534041983424, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 0
+      value: 4278190080
       objectReference: {fileID: 0}
     - target: {fileID: 7402629732120797318, guid: 794d7aa90fccb214ba2c534041983424, type: 3}
       propertyPath: m_fontSize
@@ -2203,7 +2207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7402629732120797318, guid: 794d7aa90fccb214ba2c534041983424, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 16777215
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7665905387108209311, guid: 794d7aa90fccb214ba2c534041983424, type: 3}
       propertyPath: anim
