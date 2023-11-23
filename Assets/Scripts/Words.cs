@@ -40,14 +40,6 @@ public class Words : MonoBehaviour
             TransistiveVerbs.Add(myString.Trim().ToLower());
 
     }
-
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.A)) //Changes the words when the player presses the A Key (Will be removed)
-        {
-
-        }
-    }
     
     public void GetFortuneText()
     {
