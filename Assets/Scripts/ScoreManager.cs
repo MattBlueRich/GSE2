@@ -32,7 +32,7 @@ public class ScoreManager : MonoBehaviour
     private void Start()
     {
         highScore = PlayerPrefs.GetFloat("highScore", 0); // Fetches the PlayerPref "highScore", if it doesn't exist, create it and set with value of 0.
-        highScoreText.text = "HighScore: " + highScore.ToString("F0");
+        highScoreText.text = "Highscore: " + highScore.ToString("F0");
 
         StartCoroutine(ScorePerSecond());
     }
