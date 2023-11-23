@@ -8,7 +8,7 @@ public class DelayPulseAnimation : MonoBehaviour
 
     void Start()
     {
-        anim.SetBool("CanPlay", false);
+        //anim.SetBool("CanPlay", false);
       //  StartCoroutine(Delay());
     }
 
