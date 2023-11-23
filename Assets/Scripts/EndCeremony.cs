@@ -52,18 +52,12 @@ public class EndCeremony : MonoBehaviour
             if (anim.GetCurrentAnimatorStateInfo(0).IsName("EndCeremony"))
             {
 
-                anim.speed = 1000;
+                anim.SetTrigger("Skip");
 
             }
 
 
         }
 
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("EndCeremonyFortune"))
-        {
-
-            anim.speed = 1;
-
-        }
     }
 }
